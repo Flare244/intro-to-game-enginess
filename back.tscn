@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://iv6g5v8tgvxx"]
+
+[ext_resource type="Texture2D" uid="uid://cgcgri3s15nk3" path="res://2D Resources/tilesets/back.png" id="1_x3xug"]
+
+[node name="Back" type="Sprite2D"]
+position = Vector2(465, 317)
+texture = ExtResource("1_x3xug")
