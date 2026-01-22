@@ -1,7 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://iv6g5v8tgvxx"]
 
-[ext_resource type="Texture2D" uid="uid://cgcgri3s15nk3" path="res://2D Resources/tilesets/back.png" id="1_x3xug"]
+[ext_resource type="PackedScene" uid="uid://dy7t07n8qxx2g" path="res://player.tscn" id="1_x3xug"]
 
-[node name="Back" type="Sprite2D"]
-position = Vector2(465, 317)
-texture = ExtResource("1_x3xug")
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_x3xug")]
+position = Vector2(0, -2)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
