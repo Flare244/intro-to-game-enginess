@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dy7t07n8qxx2g"]
+[gd_scene load_steps=10 format=3 uid="uid://dy7t07n8qxx2g"]
 
-[ext_resource type="Texture2D" uid="uid://dim8dw604java" path="res://assets/2D Resources/characters/DinoSprites - doux.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dim8dw604java" path="res://Assets/characters/DinoSprites - doux.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://qgletjucj3j5" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -49,14 +50,16 @@ animations = [{
 radius = 4.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_1jxqw")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.6646942
+frame_progress = 0.97394186
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(0, 4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_dw050")
